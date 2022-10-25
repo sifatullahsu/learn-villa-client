@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { AuthContext } from '../contexts/AuthContextComp';
 import GitHubSignIn from './GitHubSignIn';
 import GoogleSignIn from './GoogleSignIn';
@@ -9,13 +10,51 @@ const Login = () => {
 
   const { userLogin } = useContext(AuthContext);
 
-  // console.log(userLogin);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/profile';
+
+  const handleUserLogin = event => {
+    event.preventDefault();
+
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    userLogin(email, password)
+      .then(res => {
+        toast.success('Successfully logged in!!', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        form.reset();
+        navigate(from);
+      })
+      .catch(err => {
+        toast.error('Something is wrong!!', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      })
+  }
 
   return (
     <div className='form-section'>
       <div className="form-inner">
         <h3>Account Login</h3>
-        <Form>
+        <Form onSubmit={handleUserLogin}>
 
           <Form.Group className="form-group form-box clearfix" controlId="login-email">
             <Form.Control name="email" type="email" placeholder="Email" />
