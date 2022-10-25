@@ -23,30 +23,11 @@ const Login = () => {
 
     userLogin(email, password)
       .then(res => {
-        toast.success('Successfully logged in!!', {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-        form.reset();
-        navigate(from);
+        toast.success('Successfully logged in!!');
+        navigate(from, { replace: true });
       })
       .catch(err => {
-        toast.error('Something is wrong!!', {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        toast.error('Something is wrong!!');
       })
   }
 
@@ -79,8 +60,8 @@ const Login = () => {
         </div>
 
         <ul className="social-list clearfix">
-          <li className="google-bg"><GoogleSignIn></GoogleSignIn></li>
-          <li className="github-bg"><GitHubSignIn></GitHubSignIn></li>
+          <li className="google-bg"><GoogleSignIn from={from}></GoogleSignIn></li>
+          <li className="github-bg"><GitHubSignIn from={from}></GitHubSignIn></li>
         </ul>
 
         <div>Don't have an account? <Link to="/register" className="thembo"> Register here</Link></div>

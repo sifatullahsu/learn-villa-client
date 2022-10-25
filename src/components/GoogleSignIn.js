@@ -1,15 +1,24 @@
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { AuthContext } from '../contexts/AuthContextComp';
 
 
-const GoogleSignIn = () => {
+const GoogleSignIn = ({ from }) => {
 
-  const { userLogin } = useContext(AuthContext);
+  const { userSocialLogin } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  // console.log(userLogin);
 
-  const handleGoogleSignIn = (e) => {
-
+  const handleGoogleSignIn = () => {
+    userSocialLogin('google')
+      .then(res => {
+        toast.success('Successfully logged in!!');
+        navigate(from);
+      })
+      .catch(err => {
+        toast.error('Something is wrong!!');
+      })
   }
 
   return (
