@@ -9,7 +9,7 @@ const Login = () => {
 
   const { userLogin } = useContext(AuthContext);
 
-  console.log(userLogin);
+  // console.log(userLogin);
 
   return (
     <div className='form-section'>

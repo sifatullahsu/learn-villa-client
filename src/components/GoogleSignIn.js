@@ -6,7 +6,7 @@ const GoogleSignIn = () => {
 
   const { userLogin } = useContext(AuthContext);
 
-  console.log(userLogin);
+  // console.log(userLogin);
 
   const handleGoogleSignIn = (e) => {
 

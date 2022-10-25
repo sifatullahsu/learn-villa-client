@@ -6,7 +6,7 @@ const GitHubSignIn = () => {
 
   const { userLogin } = useContext(AuthContext);
 
-  console.log(userLogin);
+  // console.log(userLogin);
 
   const handleGithubSignIn = () => {
 
