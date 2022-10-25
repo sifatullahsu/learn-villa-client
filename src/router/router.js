@@ -2,8 +2,10 @@ import Error from "../components/Error";
 import { coursesLoader } from "../dataLoader/coursesLoader";
 import { getCourse } from "../dataLoader/getCourse";
 import Main from "../layouts/Main";
+import BlogPage from "../pages/BlogPage";
 import CheckoutPage from "../pages/CheckoutPage";
 import CoursesPage from "../pages/CoursesPage";
+import FaqPage from "../pages/FaqPage";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import ProfilePage from "../pages/ProfilePage";
@@ -50,11 +52,11 @@ export const router = createBrowserRouter([
       },
       {
         path: '/faq',
-        element: <div>FAQ</div>
+        element: <FaqPage></FaqPage>
       },
       {
         path: '/blog',
-        element: <div>Blog</div>
+        element: <BlogPage></BlogPage>
       },
       {
         path: '*',

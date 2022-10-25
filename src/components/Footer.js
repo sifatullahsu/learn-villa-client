@@ -74,8 +74,9 @@ const Footer = () => {
             style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
           >
             Developed By &nbsp;
-            <Link className="text-white" to="https://www.sifatullahsu.com/"
-            >SIFAT ULLAH</Link>
+            <a href="https://www.sifatullahsu.com/" target="_blank" rel="noreferrer" className="text-white">
+              SIFAT ULLAH
+            </a>
           </div>
         </div>
 

@@ -5,7 +5,7 @@ header .navbar {
 header nav a.nav-link {
   color: #fff;
   padding: 10px 20px !important;
-  border-right: 1px solid #6351CE;
+  border-right: 1px solid #5a49ba;
 }
 
 header nav a.nav-link:first-child {

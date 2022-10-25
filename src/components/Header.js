@@ -58,7 +58,7 @@ const Header = () => {
 
           </div>
           <div style={{ backgroundColor: 'rgb(99, 81, 206)' }}>
-            <Navbar.Collapse className='container justify-content-center' id="header-navbar-nav">
+            <Navbar.Collapse className='container justify-content-start' id="header-navbar-nav">
               <Nav>
                 <NavLink
                   className={({ isActive }) => isActive && location === '/' ? 'nav-link active' : 'nav-link'}
