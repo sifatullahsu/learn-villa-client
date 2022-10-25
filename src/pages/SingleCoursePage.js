@@ -6,8 +6,6 @@ const SingleCoursePage = () => {
   const course = useLoaderData();
   const { _id, name, picture, short_description, description } = course;
 
-  console.log(_id);
-
   return (
     <div className='container py-5'>
       <div>
