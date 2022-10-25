@@ -1,5 +1,43 @@
+header .navbar {
+  display: unset;
+}
+
+header nav a.nav-link {
+  color: #fff;
+  padding: 10px 20px !important;
+  border-right: 1px solid #6351CE;
+}
+
+header nav a.nav-link:first-child {
+  border-left: 1px solid #5a49ba;
+}
+
+header nav a.nav-link.active,
+header nav a.nav-link:hover {
+  color: #fff !important;
+  background-color: #1C2331;
+}
+
+#dark-mode.form-check .form-check-input {
+  float: unset !important;
+  margin-top: 7px;
+  margin-right: 7px;
+}
+
 footer a {
   text-decoration: none;
+}
+
+.btn-base {
+  background-color: #6351CE !important;
+  color: #fff !important;
+  border-color: #6351CE !important;
+}
+
+.btn-base.active,
+.btn-base:hover {
+  background-color: #1C2331 !important;
+  border-color: #1C2331 !important;
 }
 
 .form-section {

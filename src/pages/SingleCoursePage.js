@@ -4,7 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 const SingleCoursePage = () => {
 
   const course = useLoaderData();
-  const { _id, name, picture, short_description, description } = course;
+  const { name, picture, short_description, description } = course;
 
   return (
     <div className='container py-5'>
