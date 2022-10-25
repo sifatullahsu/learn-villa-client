@@ -8,7 +8,7 @@ import GoogleSignIn from './GoogleSignIn';
 
 const Register = () => {
 
-  const { userRegister } = useContext(AuthContext);
+  const { userRegister, updateUserDisplayName } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -18,13 +18,13 @@ const Register = () => {
     event.preventDefault();
 
     const form = event.target;
-    // const name = form.name.value;
+    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
 
     userRegister(email, password)
       .then(res => {
-        console.log(res);
+        updateUserDisplayName(name);
         toast.success('Successfully logged in!!', {
           position: "top-right",
           autoClose: 5000,

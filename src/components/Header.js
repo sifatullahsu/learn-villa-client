@@ -1,18 +1,21 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContextComp';
 
 const Header = () => {
 
-  const location = useLocation().pathname;
   const { user, userLogout } = useContext(AuthContext);
+  const location = useLocation().pathname;
+  const navigate = useNavigate();
 
   const handleUserLogout = () => {
     userLogout()
-      .then(res => console.log(res))
-      .catch(err => console.error(err))
+      .then(res => {
+        navigate('/');
+      })
+      .catch(err => { })
   }
 
   return (
@@ -33,7 +36,10 @@ const Header = () => {
             <NavLink className='nav-link' to='/register'>Register</NavLink>
             <NavLink className='nav-link' to='/profile'>Profile</NavLink>
             <NavLink className='nav-link' to='/checkout'>Checkout</NavLink>
-            <button onClick={handleUserLogout}>Logout</button>
+            {
+              user &&
+              <button onClick={handleUserLogout}>Logout</button>
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -6,6 +6,7 @@ import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import ProfilePage from "../pages/ProfilePage";
 import RegisterPage from "../pages/RegisterPage";
+import PrivateRoute from "./PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -33,11 +34,11 @@ export const router = createBrowserRouter([
       },
       {
         path: '/checkout',
-        element: <CheckoutPage></CheckoutPage>
+        element: <PrivateRoute><CheckoutPage></CheckoutPage></PrivateRoute>
       },
       {
         path: '/profile',
-        element: <ProfilePage></ProfilePage>
+        element: <PrivateRoute><ProfilePage></ProfilePage></PrivateRoute>
       }
     ]
   }
