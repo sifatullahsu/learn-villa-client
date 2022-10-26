@@ -27,7 +27,7 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch(err => {
-        toast.error('Something is wrong!!');
+        toast.error(err.message);
       })
   }
 

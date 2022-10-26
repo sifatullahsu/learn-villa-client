@@ -1,4 +1,5 @@
 import Error from "../components/Error";
+import NoCheckout from "../components/NoCheckout";
 import { coursesLoader } from "../dataLoader/coursesLoader";
 import { getCourse } from "../dataLoader/getCourse";
 import Main from "../layouts/Main";
@@ -43,12 +44,17 @@ export const router = createBrowserRouter([
         element: <RegisterPage></RegisterPage>
       },
       {
-        path: '/checkout',
-        element: <PrivateRoute><CheckoutPage></CheckoutPage></PrivateRoute>
-      },
-      {
         path: '/profile',
         element: <PrivateRoute><ProfilePage></ProfilePage></PrivateRoute>
+      },
+      {
+        path: '/checkout',
+        element: <PrivateRoute><NoCheckout></NoCheckout></PrivateRoute>
+      },
+      {
+        path: '/checkout/:id',
+        element: <PrivateRoute><CheckoutPage></CheckoutPage></PrivateRoute>,
+        loader: ({ params }) => getCourse(params.id)
       },
       {
         path: '/faq',
@@ -59,7 +65,7 @@ export const router = createBrowserRouter([
         element: <BlogPage></BlogPage>
       },
       {
-        path: '*',
+        path: '/*',
         element: <Error></Error>
       }
     ]

@@ -154,7 +154,6 @@ footer a {
 }
 
 .form-section .form-check {
-  float: left;
   margin-bottom: 0;
   padding-left: 25px;
   font-size: 16px;
@@ -219,4 +218,60 @@ footer a {
 
 .form-section .btn-theme:hover {
   color: #fff;
+}
+
+
+.profile .nav-item {
+  border: 1px solid #ddd;
+  border-bottom-width: 0;
+}
+
+.profile .nav-item:last-child {
+  border-bottom-width: 1px;
+}
+
+.profile .nav-pills .nav-link {
+  border-radius: 0;
+}
+
+.rr-header-toggle {
+  margin-left: 7px;
+  padding: 7px !important;
+  font-size: 14px !important;
+}
+
+.card {
+  border-color: #eeebeb;
+}
+
+.btn-download {
+  position: absolute;
+  right: 0;
+}
+
+.hero-section {
+  background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 179, 255, .3)), url("../public/images/cover-photo.jpg");
+  padding: 140px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 50px;
+}
+
+
+.hero-section h1 span {
+  font-size: 40px;
+}
+
+.course-list a {
+  text-decoration: none;
+  font-size: 12px;
+  background-color: #211297;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 4px;
 }

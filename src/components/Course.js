@@ -8,7 +8,8 @@ const Course = ({ course }) => {
         <img src={course.picture} className="card-img-top img-fluid" alt="..." />
         <div className="card-body">
           <h5 className="card-title fs-6">{course.name}</h5>
-          <p className="card-text">{course.short_description}</p>
+          <p className="card-text text-muted">{course.short_description}</p>
+          <p className='fw-bold'>Price: ${course.price}</p>
           <Link to={`/courses/${course._id}`} className='btn btn-primary btn-sm'>View Details</Link>
         </div>
       </div>

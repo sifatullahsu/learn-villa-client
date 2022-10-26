@@ -1,10 +1,9 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../contexts/AuthContextComp';
-import { FaSignOutAlt, FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
 
@@ -27,12 +26,11 @@ const Header = () => {
         <div className='flex-column align-items-baseline'>
           <div className='container py-4'>
             <div className='row'>
-              <div className='col-md-3'>
+              <div className='col-3'>
                 <NavLink to='/' className='navbar-brand'>Learn Villa</NavLink>
-                <Navbar.Toggle aria-controls="header-navbar-nav" />
               </div>
-              <div className='col-md-9 text-end'>
-                <div id='dark-mode' className="d-inline form-check form-switch mx-4">
+              <div className='col-9 d-flex justify-content-end align-items-center'>
+                <div id='dark-mode' className="d-inline form-check form-switch me-2">
                   <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                   <img src='./images/night-mode.png' width='20px' alt="" />
                 </div>
@@ -46,13 +44,24 @@ const Header = () => {
                 {
                   user &&
                   <div className='d-inline'>
-                    <FaUserCircle></FaUserCircle>
-                    <span>
-                      <span>{user?.displayName}</span>
-                      <button onClick={handleUserLogout}>Logout</button>
-                    </span>
+                    <OverlayTrigger
+                      key='bottom'
+                      placement='bottom'
+                      overlay={
+                        <Tooltip id={`tooltip-'bottom'`}> {user.displayName}</Tooltip>
+                      }
+                    >
+                      <img src={user?.photoURL} width='35px' style={{ borderRadius: '50%' }} alt="" />
+                    </OverlayTrigger>
+
+                    <button
+                      onClick={handleUserLogout}
+                      className='btn btn-dark btn-sm ms-3'
+                    >Logout</button>
                   </div>
                 }
+
+                <Navbar.Toggle aria-controls="header-navbar-nav" className='rr-header-toggle' />
               </div>
             </div>
 
@@ -65,15 +74,16 @@ const Header = () => {
                   to='/'
                 >Home</NavLink>
                 <NavLink className='nav-link' to='/courses'>Courses</NavLink>
-                <NavLink className='nav-link' to='/login'>Login</NavLink>
-                <NavLink className='nav-link' to='/register'>Register</NavLink>
                 <NavLink className='nav-link' to='/profile'>Profile</NavLink>
                 <NavLink className='nav-link' to='/checkout'>Checkout</NavLink>
                 <NavLink className='nav-link' to='/faq'>FAQ</NavLink>
                 <NavLink className='nav-link' to='/blog'>Blog</NavLink>
                 {
-                  user &&
-                  <button className='btn btn-dark' onClick={handleUserLogout}><FaSignOutAlt></FaSignOutAlt></button>
+                  !user &&
+                  <>
+                    <NavLink className='nav-link' to='/login'>Login</NavLink>
+                    <NavLink className='nav-link' to='/register'>Register</NavLink>
+                  </>
                 }
               </Nav>
             </Navbar.Collapse>

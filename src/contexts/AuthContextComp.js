@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateEmail, updatePassword, updateProfile } from 'firebase/auth';
 import app from '../firebase/firebase.init';
 
 
@@ -42,8 +42,16 @@ const AuthContextComp = ({ children }) => {
     return signOut(auth);
   }
 
-  const updateUserDisplayName = name => {
-    return updateProfile(auth.currentUser, { displayName: name })
+  const updateUserProfile = arg => {
+    return updateProfile(auth.currentUser, arg)
+  }
+
+  const updateUserEmail = email => {
+    return updateEmail(auth.currentUser, email);
+  }
+
+  const updateUserPassword = pass => {
+    return updatePassword(auth.currentUser, pass);
   }
 
   useEffect(() => {
@@ -65,7 +73,9 @@ const AuthContextComp = ({ children }) => {
     userLogin,
     userRegister,
     userLogout,
-    updateUserDisplayName,
+    updateUserProfile,
+    updateUserEmail,
+    updateUserPassword,
     userSocialLogin
   }
 

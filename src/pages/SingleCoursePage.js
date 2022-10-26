@@ -1,22 +1,24 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import { FaDownload } from "react-icons/fa";
 
 const SingleCoursePage = () => {
 
   const course = useLoaderData();
-  const { name, picture, short_description, description } = course;
+  const { _id, name, picture, price, short_description, description } = course;
 
   return (
     <div className='container py-5'>
-      <div>
+      <div className='position-relative'>
+        <div className='btn-download'><button className='btn btn-primary'><FaDownload></FaDownload></button></div>
         <img src={picture} alt="" />
-        <h1>{name}</h1>
+        <h3 className='my-3'>{name}</h3>
         <p>{short_description}</p>
+        <p className='fw-bold'>Price: ${price}</p>
         <div>
           <p>{description}</p>
         </div>
-        <button className='btn btn-primary'>Download</button>
-        <button className='btn btn-primary mx-4'>Checkout</button>
+        <Link to={`/checkout/${_id}`} className='btn btn-primary'>Get premium access</Link>
       </div>
     </div>
   );

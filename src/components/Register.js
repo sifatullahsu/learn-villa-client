@@ -8,7 +8,7 @@ import GoogleSignIn from './GoogleSignIn';
 
 const Register = () => {
 
-  const { userRegister, updateUserDisplayName } = useContext(AuthContext);
+  const { userRegister, updateUserProfile } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -18,20 +18,23 @@ const Register = () => {
     event.preventDefault();
 
     const form = event.target;
-    const name = form.name.value;
+    const displayName = form.name.value;
+    const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
 
     userRegister(email, password)
       .then(res => {
-        updateUserDisplayName(name);
-        form.reset();
-        toast.success('Successfully logged in!!');
-        navigate(from);
+        updateUserProfile({ displayName, photoURL })
+          .then(res => {
+            toast.success('Successfully logged in!!');
+            navigate(from);
+          })
       })
       .catch(err => {
         toast.error('Something is wrong!!');
       })
+
   }
 
   return (
@@ -42,6 +45,10 @@ const Register = () => {
 
           <Form.Group className="form-group form-box clearfix" controlId="register-name">
             <Form.Control name="name" type="text" placeholder="Full name" required />
+          </Form.Group>
+
+          <Form.Group className="form-group form-box clearfix" controlId="register-photo-url">
+            <Form.Control name="photoURL" type="text" placeholder="Photo URL" required />
           </Form.Group>
 
           <Form.Group className="form-group form-box clearfix" controlId="register-email">
