@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Nav, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../contexts/AuthContextComp';
 
@@ -48,10 +48,10 @@ const Header = () => {
                       key='bottom'
                       placement='bottom'
                       overlay={
-                        <Tooltip id={`tooltip-'bottom'`}> {user.displayName}</Tooltip>
+                        <Tooltip id={`tooltip-'bottom'`}>{user.displayName}</Tooltip>
                       }
                     >
-                      <img src={user?.photoURL ? user.photoURL : '../images/user.png'} width='35px' style={{ borderRadius: '50%' }} alt="" />
+                      <Link to='/profile'><img src={user?.photoURL ? user.photoURL : '../images/user.png'} width='35px' style={{ borderRadius: '50%' }} alt="" /></Link>
                     </OverlayTrigger>
 
                     <button
@@ -78,13 +78,6 @@ const Header = () => {
                 <NavLink className='nav-link' to='/checkout'>Checkout</NavLink>
                 <NavLink className='nav-link' to='/faq'>FAQ</NavLink>
                 <NavLink className='nav-link' to='/blog'>Blog</NavLink>
-                {
-                  !user &&
-                  <>
-                    <NavLink className='nav-link' to='/login'>Login</NavLink>
-                    <NavLink className='nav-link' to='/register'>Register</NavLink>
-                  </>
-                }
               </Nav>
             </Navbar.Collapse>
           </div>
