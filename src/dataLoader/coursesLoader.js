@@ -1,5 +1,5 @@
 export const coursesLoader = async () => {
-  const coursesData = await fetch('http://localhost:5000/courses');
+  const coursesData = await fetch('https://learn-villa-server.vercel.app/courses');
   const courses = await coursesData.json();
 
   return courses;
