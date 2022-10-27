@@ -5,7 +5,7 @@ const Error = () => {
     <div className='container'>
       <div className='text-center'>
         <img
-          src='./images/404.jpg'
+          src='../images/404.jpg'
           alt=""
           className='img-fluid'
           style={{ maxWidth: '500px' }}

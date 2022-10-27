@@ -9,12 +9,13 @@ const CoursesPage = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-lg-9 py-5 pe-5">
+        <div className="col-lg-9 py-5 pe-lg-5">
           <h2 className='mb-4'>Our Courses</h2>
           <Courses courses={courses}></Courses>
         </div>
         <div className="col-lg-3 py-5" style={{ backgroundColor: 'rgb(28, 35, 49)' }}>
           <div>
+            <h5 className='text-white'>Recent Courses:</h5>
             <CoursesList courses={courses}></CoursesList>
           </div>
         </div>

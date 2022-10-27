@@ -1,7 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import Courses from '../components/Courses';
 
 const HomePage = () => {
+  const courses = useLoaderData();
+
   return (
     <div>
       <section className='hero-section text-white' >
@@ -18,10 +21,11 @@ const HomePage = () => {
       </section>
 
       <section>
-        <div className="container">
+        <div className="container py-5 mx-auto" style={{ maxWidth: '980px' }}>
           <div className="row">
             <div className="col-12">
-
+              <h3 className='mb-4'>Our Courses</h3>
+              <Courses key={courses._id} courses={courses}></Courses>
             </div>
           </div>
         </div>

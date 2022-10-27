@@ -1,5 +1,3 @@
-import Error from "../components/Error";
-import NoCheckout from "../components/NoCheckout";
 import { coursesLoader } from "../dataLoader/coursesLoader";
 import { getCourse } from "../dataLoader/getCourse";
 import Main from "../layouts/Main";
@@ -13,6 +11,8 @@ import ProfilePage from "../pages/ProfilePage";
 import RegisterPage from "../pages/RegisterPage";
 import SingleCoursePage from "../pages/SingleCoursePage";
 import PrivateRoute from "./PrivateRoute";
+import Error from "../components/Error";
+import NoCheckout from "../components/NoCheckout";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -23,7 +23,8 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <HomePage></HomePage>
+        element: <HomePage></HomePage>,
+        loader: () => coursesLoader()
       },
       {
         path: '/courses',

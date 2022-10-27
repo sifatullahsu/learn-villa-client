@@ -10,7 +10,7 @@ const CourseList = ({ course }) => {
         </div>
         <div className="col-7">
           <p className='mb-0'>{course.name}</p>
-          <Link to={`courses/${course._id}`} className=''>View</Link>
+          <Link to={`courses/${course._id}`} className='btn-primary'>View</Link>
         </div>
       </div>
     </div>

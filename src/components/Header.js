@@ -24,7 +24,7 @@ const Header = () => {
     <header>
       <Navbar expand="lg">
         <div className='flex-column align-items-baseline'>
-          <div className='container py-4'>
+          <div className='container py-4 myborder'>
             <div className='row'>
               <div className='col-3'>
                 <NavLink to='/' className='navbar-brand'>Learn Villa</NavLink>
@@ -32,7 +32,7 @@ const Header = () => {
               <div className='col-9 d-flex justify-content-end align-items-center'>
                 <div id='dark-mode' className="d-inline form-check form-switch me-2">
                   <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-                  <img src='./images/night-mode.png' width='20px' alt="" />
+                  <img src='../images/night-mode.png' width='20px' alt="" />
                 </div>
                 {
                   !user &&
