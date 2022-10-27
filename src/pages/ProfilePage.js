@@ -62,7 +62,7 @@ const ProfilePage = () => {
   return (
     <div className='container py-5 profile'>
       <div>
-        <img src={photoURL} className='rounded-circle mb-2' style={{ width: '50px' }} alt="" />
+        <img src={photoURL ? photoURL : '../images/user.png'} className='rounded-circle mb-2' style={{ width: '50px' }} alt="" />
         <h5>{displayName}</h5>
         <div>{email}</div>
       </div>

@@ -51,7 +51,7 @@ const Header = () => {
                         <Tooltip id={`tooltip-'bottom'`}> {user.displayName}</Tooltip>
                       }
                     >
-                      <img src={user?.photoURL} width='35px' style={{ borderRadius: '50%' }} alt="" />
+                      <img src={user?.photoURL ? user.photoURL : '../images/user.png'} width='35px' style={{ borderRadius: '50%' }} alt="" />
                     </OverlayTrigger>
 
                     <button
