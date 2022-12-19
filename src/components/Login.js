@@ -56,7 +56,7 @@ const Login = () => {
 
   return (
     <div className='form-section'>
-      <div className="form-inner">
+      <div className="form-inner myborder">
         <h3>Account Login</h3>
         <Form onSubmit={handleUserLogin}>
 

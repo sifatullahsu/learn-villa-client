@@ -95,7 +95,8 @@ footer a {
   -webkit-box-orient: vertical;
 }
 
-.card {
+.card,
+.myborder {
   border-color: #f5f5f5 !important;
   box-shadow: 0 2px 10px rgb(0 0 0 / 5%);
 }

@@ -38,8 +38,8 @@ const Register = () => {
   }
 
   return (
-    <div className='form-section'>
-      <div className="form-inner">
+    <div className='form-section '>
+      <div className="form-inner myborder">
         <h3>Account Register</h3>
         <Form onSubmit={handleUserRegister}>
 

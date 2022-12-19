@@ -13,7 +13,7 @@ const HomePage = () => {
             <div className="col-12">
               <h1 className='mb-3'>Take The First Step To <br /> <span>Knowledge With Us</span></h1>
               <div>
-                <Link to='/courses' className='btn btn-light mt-4'>Explore Courses</Link>
+                <Link to='/courses' className='btn btn-primary mt-4'>Explore Courses</Link>
               </div>
             </div>
           </div>

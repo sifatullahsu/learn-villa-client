@@ -20,14 +20,11 @@ const LoginPage = () => {
 
   return (
     <div>
-      <div className="login-14 bg-dark">
+      <div className="login-14">
         <div className="container">
-          <div className="row">
+          <div className="row justify-content-center">
             <div className="col-lg-6">
               <Login></Login>
-            </div>
-            <div className="col-lg-6">
-
             </div>
           </div>
         </div>
