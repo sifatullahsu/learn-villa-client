@@ -1,21 +1,60 @@
-header .navbar {
+:root {}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+}
+
+header.v1 .navbar {
   display: unset;
 }
 
-header nav a.nav-link {
+header.v1 nav a.nav-link {
   color: #fff;
   padding: 10px 20px !important;
   border-right: 1px solid #5a49ba;
 }
 
-header nav a.nav-link:first-child {
+header.v1 nav a.nav-link:first-child {
   border-left: 1px solid #5a49ba;
 }
 
-header nav a.nav-link.active,
-header nav a.nav-link:hover {
+header.v1 nav a.nav-link.active,
+header.v1 nav a.nav-link:hover {
   color: #fff !important;
   background-color: #1C2331;
+}
+
+header.v2 {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  border-top: 6px solid #6351CE;
+}
+
+header.v2 .navbar-brand img {
+  max-width: 180px;
+}
+
+header.v2 ul.navbar-nav {
+  margin-right: 25px;
+}
+
+header.v2 nav a.nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500 !important;
+}
+
+header.v2 nav a.nav-link.active {
+  color: #6351CE;
+  font-weight: 600 !important;
 }
 
 #dark-mode.form-check .form-check-input {
@@ -305,5 +344,9 @@ footer a {
 
   .myborder {
     border-bottom: 1px solid #ddd;
+  }
+
+  header.v2 .navbar-brand img {
+    max-width: 130px;
   }
 }

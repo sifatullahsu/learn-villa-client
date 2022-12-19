@@ -21,13 +21,15 @@ const Header = () => {
   }
 
   return (
-    <header>
+    <header className='v1'>
       <Navbar expand="lg">
         <div className='flex-column align-items-baseline'>
           <div className='container py-4 myborder'>
             <div className='row'>
               <div className='col-3'>
-                <NavLink to='/' className='navbar-brand'>Learn Villa</NavLink>
+                <NavLink to='/' className='navbar-brand'>
+                  <img src="../images/logo.png" style={{ maxWidth: '180px' }} alt="" />
+                </NavLink>
               </div>
               <div className='col-9 d-flex justify-content-end align-items-center'>
                 <div id='dark-mode' className="d-inline form-check form-switch me-2">
