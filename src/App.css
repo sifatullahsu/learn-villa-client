@@ -71,6 +71,10 @@ footer a {
   text-decoration: none;
 }
 
+.btn {
+  border-radius: 0 !important;
+}
+
 .btn-base {
   background-color: #6351CE !important;
   color: #fff !important;
@@ -311,8 +315,9 @@ footer a {
 }
 
 .hero-section {
-  background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 179, 255, .3)), url("../public/images/cover-photo.jpg");
-  padding: 140px 0;
+  /* background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 179, 255, .3)), url("../public/images/cover-photo.jpg"); */
+  background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(32, 26, 65, 0.9)), url("../public/images/banner1.jpg");
+  padding: 190px 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -348,6 +353,10 @@ footer a {
 }
 
 @media(max-width: 767px) {
+  .hero-section {
+    padding: 100px 0;
+  }
+
   .hero-section h1 {
     font-size: 28px;
   }
