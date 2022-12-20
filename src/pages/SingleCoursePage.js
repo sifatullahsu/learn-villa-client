@@ -28,10 +28,10 @@ const SingleCoursePage = () => {
         </div>
         <img src={picture} alt="" />
         <h3 className='my-3'>{name}</h3>
-        <p>{short_description}</p>
+        <p className='mytext'>{short_description}</p>
         <p className='fw-bold'>Price: ${price}</p>
         <div>
-          <p>{description}</p>
+          <p className='text-muted mytext'>{description}</p>
         </div>
         <Link to={`/checkout/${_id}`} className='btn btn-primary'>Get premium access</Link>
       </div>
