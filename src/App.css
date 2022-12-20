@@ -359,6 +359,38 @@ footer a {
   color: #fff !important;
 }
 
+
+
+.our-partner .partner-img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* border: 1px solid #f1f1f1; */
+  position: relative;
+}
+
+.our-partner img {
+  width: 100%;
+  padding: 30px;
+  border-right: 1px solid #f1f1f1;
+}
+
+.our-partner img:first-child,
+.our-partner img:nth-child(5n) {
+  border-left: 1px solid #f0f0f0;
+}
+
+.partner-img:after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
 @media(max-width: 767px) {
   .hero-section {
     padding: 100px 0;
@@ -386,5 +418,9 @@ footer a {
 
   header.v2 .navbar-brand img {
     max-width: 130px;
+  }
+
+  .our-partner img {
+    padding: 10px;
   }
 }

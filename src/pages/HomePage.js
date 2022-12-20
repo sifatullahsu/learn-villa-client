@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Courses from '../components/Courses';
+import OurPartner from '../components/OurPartner';
 
 const HomePage = () => {
   const courses = useLoaderData();
@@ -30,6 +31,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <OurPartner></OurPartner>
     </div>
   );
 };
