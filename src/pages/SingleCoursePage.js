@@ -29,7 +29,7 @@ const SingleCoursePage = () => {
         <img src={picture} alt="" />
         <h3 className='my-3'>{name}</h3>
         <p className='mytext'>{short_description}</p>
-        <p className='fw-bold'>Price: ${price}</p>
+        <p className='fw-bold'>Price: {price}</p>
         <div>
           <p className='text-muted mytext'>{description}</p>
         </div>

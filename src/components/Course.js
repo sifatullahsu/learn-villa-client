@@ -10,7 +10,7 @@ const Course = ({ course }) => {
           <h5 className="card-title fs-6 fw-bold text-truncate">{course.name}</h5>
           <p className="card-text text-muted crop-text-2">{course.short_description}</p>
           <div className='d-flex justify-content-between align-items-end pt-3'>
-            <p className='fw-bold mb-0'>Price: ${course.price}</p>
+            <p className='fw-bold mb-0'>Price: {course.price}</p>
             <Link to={`/courses/${course._id}`} className='btn btn-primary btn-sm'>View Details</Link>
           </div>
         </div>

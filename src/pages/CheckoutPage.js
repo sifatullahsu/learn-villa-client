@@ -63,7 +63,7 @@ const CheckoutPage = () => {
               />
             </div>
             <p>{short_description}</p>
-            <p>Price: ${price}</p>
+            <p>Price: {price}</p>
 
 
             <div style={{ margin: '45px 0' }}>
