@@ -29,7 +29,7 @@ const CheckoutPage = () => {
   return (
     <div className='container py-5'>
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <h2 className='text-center mb-4'>Checkout Course</h2>
+        <h2 className='text-center mb-4 base-color'>Checkout Course</h2>
         <div className='form-section'>
           <h5>Billing Details</h5>
           <Form onSubmit={handleCheckout}>

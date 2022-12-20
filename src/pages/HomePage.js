@@ -25,7 +25,7 @@ const HomePage = () => {
         <div className="container py-5 mx-auto" style={{ maxWidth: '980px' }}>
           <div className="row">
             <div className="col-12">
-              <h3 className='mb-4'>Our Courses</h3>
+              <h2 className='mb-4 base-color'>Our Courses</h2>
               <Courses key={courses._id} courses={courses}></Courses>
             </div>
           </div>

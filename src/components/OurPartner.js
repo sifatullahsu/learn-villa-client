@@ -8,7 +8,7 @@ const OurPartner = () => {
         <div className="row">
           <div className="col-lg-5">
             <p className='mytext'>OUR PARTNERS</p>
-            <h2 className='mb-4'>Learn with Our Partners</h2>
+            <h2 className='mb-4 base-color'>Learn with Our Partners</h2>
             <p className='mytext'>Get Your Quality Skills Certificate Through LearnVilla. Stay with us for the better future.</p>
             <Link to='/courses' className='btn btn-primary mt-4'>Explore Courses</Link>
           </div>

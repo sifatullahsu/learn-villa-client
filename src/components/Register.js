@@ -40,7 +40,7 @@ const Register = () => {
   return (
     <div className='form-section '>
       <div className="form-inner myborder">
-        <h3>Account Register</h3>
+        <h3 className='base-color'>Account Register</h3>
         <Form onSubmit={handleUserRegister}>
 
           <Form.Group className="form-group form-box clearfix" controlId="register-name">

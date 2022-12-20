@@ -5,7 +5,7 @@ const FaqPage = () => {
   return (
     <div className='container my-5'>
       <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-        <h2 className='text-center mb-4'>FAQ</h2>
+        <h2 className='text-center mb-4 base-color'>FAQ</h2>
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="0">
             <Accordion.Header>Can Learn Villa accept offline payment?</Accordion.Header>

@@ -10,7 +10,7 @@ const CoursesPage = () => {
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-lg-10 py-5 pe-lg-5">
-          <h2 className='mb-4'>Our Courses</h2>
+          <h2 className='mb-4 base-color'>Our Courses</h2>
           <Courses courses={courses}></Courses>
         </div>
         {/* <div className="col-lg-3 py-5" style={{ backgroundColor: 'rgb(28, 35, 49)' }}>

@@ -57,7 +57,7 @@ const Login = () => {
   return (
     <div className='form-section'>
       <div className="form-inner myborder">
-        <h3>Account Login</h3>
+        <h3 className='base-color'>Account Login</h3>
         <Form onSubmit={handleUserLogin}>
 
           <Form.Group className="form-group form-box clearfix" controlId="login-email">

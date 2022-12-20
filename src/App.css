@@ -38,25 +38,25 @@ header.v1 nav a.nav-link:hover {
   background-color: #1C2331;
 }
 
-header.v2 {
+.header.v2 {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
   border-top: 6px solid #6351CE;
 }
 
-header.v2 .navbar-brand img {
+.header.v2 .navbar-brand img {
   max-width: 180px;
 }
 
-header.v2 ul.navbar-nav {
+.header.v2 ul.navbar-nav {
   margin-right: 25px;
 }
 
-header.v2 nav a.nav-link {
+.header.v2 nav a.nav-link {
   font-family: 'Poppins', sans-serif;
   font-weight: 500 !important;
 }
 
-header.v2 nav a.nav-link.active {
+.header.v2 nav a.nav-link.active {
   color: #6351CE;
   font-weight: 600 !important;
 }
@@ -73,6 +73,14 @@ footer a {
 
 .btn {
   border-radius: 0 !important;
+}
+
+.base-color {
+  color: rgb(99, 81, 206) !important;
+}
+
+.offcanvas.offcanvas-start {
+  width: 300px !important;
 }
 
 .btn-base {
@@ -416,7 +424,7 @@ footer a {
     border-bottom: 1px solid #ddd;
   }
 
-  header.v2 .navbar-brand img {
+  .header.v2 .navbar-brand img {
     max-width: 130px;
   }
 

@@ -4,7 +4,7 @@ const BlogPage = () => {
   return (
     <div className='container my-5'>
       <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-        <h2 className='text-center mb-4'>Blog Posts</h2>
+        <h2 className='text-center mb-4 base-color'>Blog Posts</h2>
         <div className='blog-card mb-5'>
           <h5>What is cors?</h5>
           <p className='mytext'>What is CORS? CORS stands for Cross-Origin Resource Sharing . It allows us to relax the security applied to an API. This is done by bypassing the Access-Control-Allow-Origin headers, which specify which origins can access the API. Shortly, It is a mechanism to allow or restrict requested resources on a web server depend on where the HTTP request was initiated. This policy is used to secure a certain web server from access by other website or domain. For example, only the allowed domains will be able to access hosted files in a server such as a stylesheet, image, or a script.</p>
